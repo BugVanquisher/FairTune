@@ -1,16 +1,16 @@
 {
   "utility": {
-    "exact_match": 0.0,
-    "f1": 0.0,
-    "notes": "Utility eval not implemented. Model: meta-llama/Llama-3-8B-Instruct"
+    "exact_match": 2.0,
+    "f1": 21.349398247611216,
+    "notes": "Evaluated on 50 samples from SQuAD."
   },
   "safety": {
     "toxicity_rate": 0.0,
     "harassment_rate": 0.0,
-    "notes": "Safety eval not implemented. Model: meta-llama/Llama-3-8B-Instruct"
+    "notes": "Safety eval not implemented. Model: HuggingFaceH4/zephyr-7b-beta"
   },
   "fairness": {
     "parity_gap": 0.0,
-    "notes": "Fairness eval not implemented. Model: meta-llama/Llama-3-8B-Instruct"
+    "notes": "Fairness eval not implemented. Model: HuggingFaceH4/zephyr-7b-beta"
   }
 }

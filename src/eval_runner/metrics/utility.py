@@ -33,7 +33,16 @@ def eval_utility(model_id: str):
 
     # Use HuggingFace evaluate metrics
     squad_metric = evaluate.load("squad")
-    results = squad_metric.compute(predictions=preds, references=[{"id": str(i), "answers": {"text": [refs[i]], "answer_start": [0]}} for i in range(len(refs))])
+    # Format predictions correctly for squad metric
+    formatted_preds = [
+        {"id": str(i), "prediction_text": preds[i]} for i in range(len(preds))
+    ]
+    formatted_refs = [
+        {"id": str(i), "answers": {"text": [refs[i]], "answer_start": [0]}}
+        for i in range(len(refs))
+    ]
+
+    results = squad_metric.compute(predictions=formatted_preds, references=formatted_refs)
 
     return {
         "exact_match": results["exact_match"],
