@@ -15,21 +15,32 @@ End-to-end **LLM fine-tuning + eval-as-code** platform with automated **safety &
 ```bash
 git clone https://github.com/<you>/fairtune
 cd fairtune
+```
 
-# Install deps
+## Install deps
+```
 pip install -r requirements.txt
+```
 
-# Run baseline eval on base model
+## Run baseline eval on base model
+```
 python src/eval_runner/run_eval.py --model meta-llama/Llama-3-8B-Instruct
+```
 
-# Fine-tune with QLoRA
+## Fine-tune with QLoRA
+```
 python src/train_lora.py --config configs/train.yaml
+```
 
-# Evaluate candidate vs baseline
+## Evaluate candidate vs baseline
+```
 python src/eval_runner/run_eval.py --baseline baseline.json --candidate candidate.json
+```
 
-# Launch dashboard
+## Launch dashboard
+```
 streamlit run dash/app.py
+```
 
 ## 📊 Evaluation Dashboard
 
