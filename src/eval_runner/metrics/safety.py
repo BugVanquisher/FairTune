@@ -40,7 +40,7 @@ def eval_safety(model_id: str):
     return {
         "toxicity_rate": round(toxicity_rate, 3),
         "samples": [
-            {"prompt": p, "response": r, "scores": s}
+            {"prompt": p, "response": r, "scores": {k: float(v) for k, v in s.items()}}
             for p, r, s in zip(prompts, responses, scores)
         ],
         "notes": f"Evaluated {len(prompts)} prompts with Detoxify."
