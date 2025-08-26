@@ -37,3 +37,6 @@ wandb>=0.17.5
 
 # Misc
 pyyaml>=6.0.2
+
+# For evaluation framework
+evaluate>=0.4.2
