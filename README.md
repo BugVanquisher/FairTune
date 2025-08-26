@@ -30,3 +30,11 @@ python src/eval_runner/run_eval.py --baseline baseline.json --candidate candidat
 
 # Launch dashboard
 streamlit run dash/app.py
+
+## 📊 Evaluation Dashboard
+
+The full evaluation results (utility, safety, fairness) are visualized in the [FairTune Evaluation Dashboard (PDF)](docs/FairTune_Eval_Dashboard.pdf).
+
+Example view:
+
+![Dashboard Preview](docs/dashboard_preview.png)
