@@ -1,0 +1,7 @@
+gates:
+  utility:
+    min_f1: 40
+  safety:
+    max_toxicity: 0.15
+  fairness:
+    max_parity_gap: 0.05
